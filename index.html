@@ -46,6 +46,42 @@ h5{
 .save-btn { width: 100%; padding: 12px; background-color: #4CAF50; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
 
 
+  /* 1. تلوين الفورم نفسه (الخلفية والإطار) */
+  .my {
+      background-color: #f4f4f4; /* رمادي فاتح جداً */
+      border: 2px solid #333;    /* إطار غامق */
+      padding: 20px;
+      border-radius: 10px;       /* حواف دائرية */
+      max-width: 300px;          /* عرض مناسب للجوال */
+      margin: 20px auto;         /* توسيط في الصفحة */
+  }
+
+  /* 2. تلوين وتنسيق الديفات التي بداخل هذا الفورم فقط */
+  .my div {
+      margin-bottom: 15px;       /* مسافة بين الخانات لكي لا تلتصق */
+      text-align: left;          /* محاذاة النص لليسار لأنك تكتب بالإنجليزية */
+  }
+
+  /* 3. تلوين العناوين (Labels) */
+  .my label {
+      color: brown;
+      font-weight: bold;
+      display: block;            /* لجعل العنوان فوق مربع الإدخال */
+  }
+
+  /* 4. تلوين مربعات الإدخال (Inputs) */
+  .my input[type="text"], 
+  .my input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+  }
+
+
+
+  
+
 
 </style>
 </head>
@@ -56,7 +92,7 @@ h5{
 <h3>family</h3>
 my phone is very nace
 <h4><b> my brother</b></h4>
-<b>my brother</b> hi is name <b>is</b>mohamed saleh
+<strong>my brother</strong> hi is name <b>is</b>mohamed saleh
 <h5><i>YASER SAAD</h5>
 <p><del>i am angry</del></p>
 <mark>YASER</mark>
@@ -153,6 +189,9 @@ hi
 <li>
   mmm
 </li>
+<hr>
+<i>yaser</i>
+<hr>
 <li>
   fff
 </li>
@@ -373,9 +412,12 @@ me name is <span style="border:2xp solid red; badding:2px;">yaser</span>
     <h3 style="color: yellow; text-align: center;">نموذج إدخال البيانات</h3>
     
     <form id="dataForm" action="https://formspree.io/f/"yasershop57@gmail.com" method="POST">
+      
         <div class="input-group">
             <label>الاسم:</label>
-            <input type="text" name="userName" id="userName" placeholder="اكتب اسمك هنا" required>
+            <input type="text" name="userName" id="userName" 
+            placeholder="name"
+           " required>
         </div>
         
         <div class="input-group">
@@ -384,15 +426,18 @@ me name is <span style="border:2xp solid red; badding:2px;">yaser</span>
         </div>
         
         <div class="input-group">
-            <label>المدينة:</label>
-            <input type="text" name="city" id="city" placeholder="مثلاً: صنعاء" required>
-        </div>
+            <label for="country">اختر الدولة:</label>
+<select id="country" name="country" style="padding: 5px; width: 100%;">
+    <option value="yemen">اليمن</option>
+    <option value="saudi">السعودية</option>
+    <option value="egypt">مصر</option>
+    <option value="qatar">قطر</option>
+</select>
+</div>
         
         <button type="submit" class="save-btn">إرسال البيانات الآن</button>
     </form>
 </div>
-
-<hr>
 
 <h6>yyy</h6>
 
@@ -401,5 +446,52 @@ me name is <span style="border:2xp solid red; badding:2px;">yaser</span>
 <h8>
   hi my nam is <mark>Yaser</mark>
 </h8>
+<hr>
+<table border="1" style="width: 100%; text-align: center; direction: rtl;">
+    <tr>
+        <th>الاسم</th>
+        <th>الوظيفة</th>
+        <th>المدينة</th>
+    </tr>
+    <tr>
+        <td>ياسر سعد</td>
+        <td>مدخل بيانات</td>
+        <td>صنعاء</td>
+    </tr>
+    
+    <tr>
+        <td>محمد صالح</td>
+        <td>مبرمج</td>
+        <td>عدن</td>
+    </tr>
+</table>
+<hr>
+
+ <form action="https://formspree.io/f/xdandwaw" method="POST" class="my">
+  <div>
+    <label>name</label>
+<input type="text" name="full name"
+required="">
+
+  </div>
+<div>
+<label> phone</label>
+<input type="password" name="phone_namber"
+placeholder="Password" required oninvalid="this.setCustomValidity('Password is required!')" oninput="this.setCustomValidity('')">
+</div>
+<div>
+  <label>your sity</label>
+<input type="text" name="city"
+placeholder="city"  required="">
+</div>
+<div>
+  <label>emil</label>
+<input type="email" name="email"
+required="" placeholder="email"
+</div>
+<br>
+<input type="submit"  value="send Data" >
+</form>
+
 </body>
 </html>
