@@ -61,22 +61,14 @@ h5{
       margin-bottom: 15px;       /* مسافة بين الخانات لكي لا تلتصق */
       text-align: left;          /* محاذاة النص لليسار لأنك تكتب بالإنجليزية */
   }
-
-  /* 3. تلوين العناوين (Labels) */
+      
+      
   .my label {
       color: brown;
       font-weight: bold;
       display: block;            /* لجعل العنوان فوق مربع الإدخال */
   }
 
-  /* 4. تلوين مربعات الإدخال (Inputs) */
-  .my input[type="text"], 
-  .my input[type="password"] {
-      width: 100%;
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-  }
 
 
 
@@ -411,13 +403,13 @@ me name is <span style="border:2xp solid red; badding:2px;">yaser</span>
 <div class="data-entry-container">
     <h3 style="color: yellow; text-align: center;">نموذج إدخال البيانات</h3>
     
-    <form id="dataForm" action="https://formspree.io/f/"yasershop57@gmail.com" method="POST">
-      
+    <form id="dataForm" action="https://formspree.io/f/mojalkgr" method="POST">
+
         <div class="input-group">
             <label>الاسم:</label>
             <input type="text" name="userName" id="userName" 
             placeholder="name"
-           " required>
+            required>
         </div>
         
         <div class="input-group">
@@ -466,19 +458,26 @@ me name is <span style="border:2xp solid red; badding:2px;">yaser</span>
     </tr>
 </table>
 <hr>
-
- <form action="https://formspree.io/f/mojalkgr" method="POST" class="my">
+من هنا##
+ <form action="https://formspree.io/f/xbdrkzag" method="POST" class="my">
   <div>
     <label>name</label>
-<input type="text" name="full name"
+<input type="text"name="full name" 
 required="">
 
   </div>
 <div>
 <label> phone</label>
-<input type="password" name="phone_namber"
-placeholder="Password" required oninvalid="this.setCustomValidity('Password is required!')" oninput="this.setCustomValidity('')">
+<input type="phone" name="phone_namber"
+placeholder="phone" required oninvalid="this.setCustomValidity('Password is required!')" oninput="this.setCustomValidity('')">
 </div>
+<div>
+  <label>Password</label>
+<input type="password" required placeholder="your password 8_12" name="pass" minlength="8" maxlength="12"=
+oninvalid="this.setCustomValidity('Password must be between 8 and 12 characters')" 
+       oninput="this.setCustomValidity('')">
+</div>
+
 <div>
   <label>your sity</label>
 <input type="text" name="city"
@@ -487,11 +486,69 @@ placeholder="city"  required="">
 <div>
   <label>emil</label>
 <input type="email" name="email"
-required="" placeholder="email"
+required="" placeholder="email">
+</div>
+<div>
+  <label>color</label>
+<input type="color" name="color">
 </div>
 <br>
-<input type="submit"  value="send Data" >
-</form>
 
+<div style="margin: 20px; font-family: Arial;">
+    <label for="myRange" style="display: block; margin-bottom: 10px;">سنوات الخبرة لديك :</label>
+    
+    <input type="range" id="myRange" name="range" min="0" max="10" value="5"
+           style="width: 200px; cursor: pointer;"
+           oninput="updateValue(this.value)">
+
+    <span id="rangeValue" style="
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        margin-left: 10px;
+        font-weight: bold;
+    ">5</span>
+</div>
+<script>
+    // هذه الوظيفة تأخذ الرقم من الشريط وتضعه في المربع الملون
+    function updateValue(val) {
+        document.getElementById('rangeValue').innerHTML = val;
+    }
+</script>
+<br>
+<div>
+  <label>number</label>
+<input type="number" min="0" max="80" step="10">
+</div>
+<br>
+
+<div>
+  <input type="radio" id="m" name="family" value="mom" checked="">
+<label for="m">your mom</label>
+</div>
+<div>
+  <input type="radio"  id="d" name="family" value="dad" >
+  <label for="d">your dad</label>
+</div>
+<div>
+  <input type="radio" id="b" name="family" value="bb">
+  <label for="b">you brother </label>
+</div>
+<br>
+<div>
+  <input type="checkbox" id="winil" name="h" value="mac">
+<label for="winil">hhh</label>
+</div>
+<div>
+  <input type="checkbox" id="winil" name="y" value="mac" checked="">
+  <label for="winil">yyy</label>
+</div>
+<input type="submit"  value="send Data"> 
+</form>
 </body>
 </html>
