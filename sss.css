@@ -1,21 +1,26 @@
 
-.pag1{
-  background-color: green;
+.fac{
+  background-color: #e0e0e6;
 }
 header{
   color: blue;
-  font-size: 50px;
+  font-size: 120px;
 padding:10px;
   margin:10px;
 text-shadow: 3px 5px 3px #e04;
+  text-align: center;
+margin-top: -20px;
   
 }
 .Y{
   color: green;
-  font-size: 150px;
+ background-color: rgba(0 0 0 /30%);
+  font-size: 50px;
 padding:20px;
  margin:20px ; 
   text-shadow: 3px 5px 3px red;
+text-align: center;
+  
 }
 .ys{
  color: green;
@@ -44,4 +49,7 @@ font-size: 20px;
     border: 1px solid rgba(255, 255, 255, 0.3); /* حواف خفيفة */
     padding: 20px;
     border-radius: 15px; /* حواف دائرية تجعل التصميم ناعماً */
+}
+three-y{
+  
 }
